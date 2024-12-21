@@ -14,9 +14,9 @@ interface IRMaxFeaturesCardProps {
 }
 
 interface IFaqs {
-  id: number,
-  question: string,
-  answer: string
+  id: number;
+  question: string;
+  answer: string;
 }
 
 interface IFooter {
@@ -33,4 +33,10 @@ interface IPricingCard {
   heading: string;
   price: number;
   items: items[];
+}
+
+interface IPricingPlanContent {
+  label: string;
+  starter: number;
+  premium: number | string;
 }

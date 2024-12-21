@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { onboardingStepsContent } from "@/app/(home)/constant";
+import { SectionHeader } from "@/app/(home)/_components/section-header";
 
 const StepsContent = ({
   heading,
@@ -17,10 +18,10 @@ const StepsContent = ({
         height={240}
         className={"h-72 w-96"}
       />
-      <h2 className={"font-roboto mt-4 text-2xl font-medium"}>{heading}</h2>
+      <h2 className={"mt-4 font-roboto text-2xl font-medium"}>{heading}</h2>
       <p
         className={
-          "text-text-primary-foreground font-roboto mt-6 text-base font-normal"
+          "mt-6 font-roboto text-base font-normal text-text-primary-foreground"
         }
       >
         {description}
@@ -33,17 +34,12 @@ export const OnboardSteps = (): React.ReactNode => {
   return (
     <section className={"container mx-auto mt-4 h-[80vh] font-urbanist"}>
       <div className={"flex flex-col items-center gap-y-4"}>
-        <h1 className={"text-5xl font-bold"}>
-          Onboard business in 3 simple steps
-        </h1>
-        <p
-          className={
-            "font-roboto text-text-primary-foreground text-base font-normal"
+        <SectionHeader
+          heading={" Onboard business in 3 simple steps"}
+          description={
+            "Quick assisted onboarding with 30day free trial. No credit card needed."
           }
-        >
-          Quick assisted onboarding with 30day free trial. No credit card
-          needed.
-        </p>
+        />
       </div>
       <div
         className={
